@@ -42,17 +42,50 @@ Run the routine on
 
 ## Tweaks
 
-The folders are created in a folder called 'temp' in this plugin. You can move it to you 'content' folder. I've added an extra level by year, but you can ofcourse to do something else entirely with your newly created pages. Optionally, after both routines, I'll use the panel to manually correct the posts once they're in their final place, move the tags to a seperate field and add a title. 
+The folders are created in a folder called 'temp' in this plugin. You can move them to you 'content' folder. I've added an extra level by year in my site, but you can ofcourse to do something else entirely with your newly created pages. Optionally, after both routines, I'll use the panel to manually correct the posts once they're in their final place, move the tags to a seperate field and add a title. 
 
 ## Example 
 
 Check out the display on my site at
 https://mirthe.org/fotofeed
 
+## Blueprint
+
+### Photopost.yml
+
+    title: Photopost
+    num: date
+    icon: dashboard
+
+    columns:
+        left:
+            width: 2/3
+            fields:
+            photo:
+                type: files
+                layout: cards
+
+        right:
+            width: 1/3
+            fields:
+            date:
+                type: date
+                time: true
+            intro:
+                label: Intro
+                type: textarea
+                size: small
+            tags:
+                type: tags
+                options: query
+                query: site.index.filterBy("template", "in", ["photopost"]).pluck("tags", ",", true)
+            sourcelink:
+                type: url
+
 ## Todo
 
 - Offer as an official Kirby plugin
 - Add sample Kirby templates to this readme
-- Add sample Kirby Blueprint to this readme
+- Add more sample Kirby Blueprint to this readme
 - Cleanup code
 - Lots..
