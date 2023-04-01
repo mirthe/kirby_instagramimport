@@ -1,0 +1,21 @@
+{
+    "name": "mirthe/import-instagram",
+    "version": "1.0",
+    "description": "Imports posts from instagram to Kirby pages",
+    "keywords": ["kirby-plugin", "instagram", "import", "photos"],
+    "type": "kirby-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mirthe Valentijn",
+            "email": "me@Mirthe.org",
+            "homepage": "https://mirthe.org"
+        }
+    ],
+    "funding": [
+        {
+            "type": "paypal",
+            "url": "https://paypal.me/MirtheValentijn"
+        }
+    ]
+}
