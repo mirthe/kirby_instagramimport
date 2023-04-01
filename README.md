@@ -5,7 +5,7 @@ This plugin allows you to show import posts from Instagram to Kirby pages.
 ## Git submodule
 
 ```
-git submodule add https://github.com/mirthe/kirby_instagramimport site/plugins/instagramimport
+git submodule add https://github.com/mirthe/kirby_instagramimport site/plugins/instagram-import
 ```
 
 ## Usage
