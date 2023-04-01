@@ -2,7 +2,7 @@
 $kirby->impersonate('kirby');
 
 $fields = "id,media_type,media_url,thumbnail_url,timestamp,permalink,caption,children{media_url,thumbnail_url}";
-$token = option('mirthe.import-instagram.token');
+$token = option('mirthe.instagram-import.token');
 $limit = 5; // Set a number of display items
 
 function fetchData($url) {

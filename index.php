@@ -1,6 +1,6 @@
 <?php
 
-Kirby::plugin('mirthe/import-instagram', [
+Kirby::plugin('mirthe/instagram-import', [
     'options' => [
         'token' => option('instagram.token')
     ],

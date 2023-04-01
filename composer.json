@@ -1,5 +1,5 @@
 {
-    "name": "mirthe/import-instagram",
+    "name": "mirthe/instagram-import",
     "version": "1.0",
     "description": "Imports posts from instagram to Kirby pages",
     "keywords": ["kirby-plugin", "instagram", "import", "photos"],
