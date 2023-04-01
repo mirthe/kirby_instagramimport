@@ -10,6 +10,8 @@ git submodule add https://github.com/mirthe/kirby_instagramimport site/plugins/i
 
 ## Usage
 
+There are 2 routines available, one to import your entire profile from an export. A second to import only the latste N posts. To run either routine, you need to be logged into the panel as an admin user to protect your site from some abuse.
+
 ### Bulk import history
 
 First, request and download an export of your posts via
