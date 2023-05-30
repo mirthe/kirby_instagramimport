@@ -10,7 +10,7 @@ git submodule add https://github.com/mirthe/kirby_instagramimport site/plugins/i
 
 ## Usage
 
-There are 2 routines available, one to import your entire profile from an export. A second to import only the latste N posts. To run either routine, you need to be logged into the panel as an admin user to protect your site from some abuse.
+There are 2 routines available, one to import your entire profile from an export. A second to import only the latest N posts. To run either routine, you need to be logged into the panel as an admin user to protect your site from some abuse.
 
 ### Bulk import history
 
@@ -34,9 +34,10 @@ https://www.mageplaza.com/kb/how-to-get-instagram-feed-access-token.html
 
 Note: this routine won't work with a private Instagram profile, as you can only get a token for public profiles.
 
-Add the following to your Kirby config where XX is your token:
+Add the following to your Kirby config where XX is your token and 5 is the number of posts you want to process at once:
     
     'instagram.token' => 'XXX',
+    'instagram.limit' => 5,
 
 Run the routine on
 
@@ -44,7 +45,7 @@ Run the routine on
 
 ## Tweaks
 
-The folders are created in a folder called 'temp' in this plugin. You can move them to you 'content' folder. I've added an extra level by year in my site, but you can ofcourse to do something else entirely with your newly created pages. Optionally, after both routines, I'll use the panel to manually correct the posts once they're in their final place, move the tags to a seperate field and add a title. 
+The folders are created in a folder called 'temp' in this plugin. You can move them to you 'content' folder. I've added an extra level by year in my site, but you can ofcourse do something else entirely with your newly created pages. Optionally, after both routines, I'll use the panel to manually correct the posts once they're in their final place, move the tags to a seperate field and add a title. 
 
 ## Example 
 

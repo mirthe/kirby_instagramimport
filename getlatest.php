@@ -3,7 +3,7 @@ $kirby->impersonate('kirby');
 
 $fields = "id,media_type,media_url,thumbnail_url,timestamp,permalink,caption,children{media_url,thumbnail_url}";
 $token = option('mirthe.instagram-import.token');
-$limit = 5; // Set a number of display items
+$limit = option('mirthe.instagram-import.limit'); // Set a number of display items
 
 function fetchData($url) {
     $ch = curl_init();
@@ -17,6 +17,14 @@ function fetchData($url) {
 
 $result = fetchData("https://graph.instagram.com/me/media?fields={$fields}&access_token={$token}&limit={$limit}");
 $result_decode = json_decode($result, true);
+
+if (array_key_exists("error", $result_decode)) {
+  print_r($result_decode['error']['message']);
+  echo "<p>Try a new token in your Kirby config, see <a href='https://www.mageplaza.com/kb/how-to-get-instagram-feed-access-token.html#6-steps-to-get-instagram-feed-access-token'>How to get Instagram Feed Access Token</a>.</p>";
+  exit();
+// } else {
+//   print_r($result_decode);
+}
 
 function storeFile($fullpath, $subfolder) {
   // bestandsnaam eruit halen
@@ -45,6 +53,7 @@ foreach ($result_decode["data"] as $post):
   $media_type = $post["media_type"];
 
   // dateformats
+  // TODO corrigeren voor timezone!!
   $pubdatumtijd = date("Y-m-d H:i", strtotime($post["timestamp"]));
   $pubdatum = date("Y-m-d", strtotime($post["timestamp"]));
 
