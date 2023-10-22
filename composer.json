@@ -1,7 +1,8 @@
 {
-    "name": "mirthe/instagram-import",
+    "name": "mirthe/kirby_instagramimport",
     "version": "1.1",
     "description": "Imports posts from instagram to Kirby pages",
+    "homepage": "https://github.com/mirthe/kirby_instagramimport",
     "keywords": ["kirby-plugin", "instagram", "import", "photos"],
     "type": "kirby-plugin",
     "license": "MIT",
