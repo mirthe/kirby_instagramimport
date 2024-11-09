@@ -15,8 +15,11 @@ function fetchData($url) {
     return $result;
 }
 
+// Add next to the url to get the next page
+// https://stackoverflow.com/a/59830350/817297
 $result = fetchData("https://graph.instagram.com/me/media?fields={$fields}&access_token={$token}&limit={$limit}");
 $result_decode = json_decode($result, true);
+//print_r($result_decode); exit();
 
 if (array_key_exists("error", $result_decode)) {
   print_r($result_decode['error']['message']);
