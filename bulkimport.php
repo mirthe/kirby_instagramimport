@@ -40,8 +40,9 @@
         }
     }
 
-    $title = mb_convert_encoding($title, 'HTML-ENTITIES', "UTF-8");
-        
+    // $title = mb_convert_encoding($title, 'HTML-ENTITIES', "UTF-8");
+    $title = htmlspecialchars_decode(htmlentities($title));
+
     // Compile the content of the file to write
     $strtowrite =
       "Title: " . $naam
