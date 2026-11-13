@@ -2,6 +2,12 @@
 
 This plugin allows you to show import posts from Instagram to Kirby pages.
 
+## Update
+
+I'm trying to move away from Instagram for obvious reasons, and you might consider doing the same by switching to Pixelfed. To make the transition easier, I've created a similar plugin for Kirby CMS: https://github.com/mirthe/kirby_pixelfedimport
+
+This plugin will be archived and no longer be maintained.
+
 ## Git submodule
 
 ```
