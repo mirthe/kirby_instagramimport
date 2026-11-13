@@ -1,7 +1,8 @@
 <?php
 Kirby::plugin('mirthe/instagram-import', [
     'options' => [
-        'token' => option('instagram.token')
+        'token' => option('instagram.token'),
+        'limit' => 25
     ],
 
     'routes' => [
